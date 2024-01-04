@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Box, Text, Input,Stack } from '@chakra-ui/react';
+import { Box, Text, Input, Stack } from '@chakra-ui/react';
+import './CheckboxQuestion.css'
 
 const InputQuestion = ({ question, index, onAnswerSubmit }) => {
   const [answer, setAnswer] = useState('');
@@ -8,10 +9,10 @@ const InputQuestion = ({ question, index, onAnswerSubmit }) => {
     onAnswerSubmit(e.target.value);
   };
   return (
-    <Box p={4} borderWidth="1px" borderRadius="md"  display="flex" alignItems="flex-start" textAlign='start'>
-      <Stack spacing={2}>
+    <Box p={4} className='checkbox-container' textAlign='start'>
+      <Stack className='checkbox-stack'>
         <Text fontSize="lg">{`${index + 1}. ${question.question}`}</Text>
-        <Input value={answer}   onChange={handleChange}/>
+        <Input value={answer} onChange={handleChange} />
       </Stack>
     </Box>
   );

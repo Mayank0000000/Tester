@@ -1,12 +1,13 @@
 import React from 'react';
 import { Box, Text, Radio, RadioGroup, Stack } from '@chakra-ui/react';
+import './CheckboxQuestion.css'
 
-const RadioQuestion = ({ question, index, onAnswerSubmit  }) => {
+const RadioQuestion = ({ question, index, onAnswerSubmit }) => {
   return (
-    <Box p={4} borderWidth="1px" borderRadius="md"  display="flex" alignItems="flex-start">
-      <Stack spacing={2}>
+    <Box className='checkbox-container'>
+      <Stack className='checkbox-stack'>
         <Text fontSize="lg">{`${index + 1}. ${question.question}`}</Text>
-        <RadioGroup defaultValue="" mt={2} onChange={(e) => onAnswerSubmit( e)}>
+        <RadioGroup defaultValue="" mt={2} onChange={(e) => onAnswerSubmit(e)}>
           <Stack spacing={2} pl={4}>
             {question.options.map(option => (
               <Radio key={option._id} value={option.name}>

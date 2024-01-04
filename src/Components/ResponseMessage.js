@@ -1,14 +1,9 @@
 import { Text } from "@chakra-ui/react";
+import './ResponseMessage.css'
 
 function ResponseMessage() {
   return (
-    <Text
-      fontSize="xl"
-      fontWeight="bold"
-      color="red.500"
-      textAlign="center"
-      
-    >
+    <Text className="response-container"    >
       Thanks for your response
     </Text>
   );

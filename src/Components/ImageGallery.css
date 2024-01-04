@@ -1,0 +1,16 @@
+.image-gallery-container {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.image-data-box {
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 4px;
+    margin: 2px;
+}
+
+.image-image {
+    object-fit: cover;
+}

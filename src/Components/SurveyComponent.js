@@ -5,10 +5,10 @@ import InputQuestion from './InputQuestion';
 import { Stack, Button } from '@chakra-ui/react';
 import axios from 'axios';
 import ResponseMessage from './ResponseMessage';
+import { BASE_URL as baseurl } from './Constants/Constants';
 
 const SurveyComponent = (props) => {
   const [answers, setAnswers] = useState(Array(props.surveyData.length).fill({ question: '', answer: '', type: '' }));
-
   const [responseMessage, setResponseMessage] = useState(true);
 
   const handleAnswerSubmit = (index, answer, type) => {
@@ -31,20 +31,18 @@ const SurveyComponent = (props) => {
         return;
       }
     }
-
     const body = {
       surveyId: props.taskId,
       response: answers,
     };
 
     axios
-      .post('http://localhost:3001/add-Survey', body)
+      .post(`${baseurl}/add-Survey`, body)
       .then((response) => console.log('Response submitted'))
       .catch((error) => console.error(error));
 
     setResponseMessage(false);
   };
-  
 
   return (
     <>

@@ -1,0 +1,11 @@
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    border-radius: 18px;
+    border-width: 1px;
+    padding: 6px;
+}
+
+.checkbox-stack {
+    gap: 4px;
+}

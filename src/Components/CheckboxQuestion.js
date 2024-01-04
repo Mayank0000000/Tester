@@ -1,10 +1,11 @@
 import React from 'react';
 import { Box, Text, Checkbox, Stack } from '@chakra-ui/react';
+import './CheckboxQuestion.css'
 
-const CheckboxQuestion = ({ question, index, onAnswerSubmit  }) => {
+const CheckboxQuestion = ({ question, index, onAnswerSubmit }) => {
   return (
-    <Box p={4} borderWidth="1px" borderRadius="md"  display="flex" alignItems="flex-start">
-      <Stack spacing={2}>
+    <Box className='checkbox-container'>
+      <Stack className='checkbox-stack'>
         <Text fontSize="lg">{`${index + 1}. ${question.question}`}</Text>
         <Stack spacing={2} pl={4}>
           {question.options.map(option => (

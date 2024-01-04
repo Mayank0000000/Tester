@@ -1,0 +1,22 @@
+.video-container {
+    background-color: gray;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.video-flex {
+    gap: 4;
+    align-items: center;
+}
+
+.time-container {
+    width: 100%;
+    max-width: 400px;
+    width: 100%;
+    gap: 4px;
+}
+
+.react-player {
+    border-radius: 8px;
+    overflow: hidden;
+}
