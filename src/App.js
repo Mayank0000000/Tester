@@ -19,8 +19,15 @@ function App() {
 
   const videoData = async() => {
     const response = await fetch(`http://localhost:3001/videos/get-video/${taskId}`)
+    if(!response.ok) {
+      
+      return  
+   
+   }
+    
     const data = await response.json();
     setSurveyData(data);
+    
   }
 
   const imageData = async() => {
